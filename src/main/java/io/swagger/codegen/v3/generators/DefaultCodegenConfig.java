@@ -3547,7 +3547,7 @@ public abstract class DefaultCodegenConfig implements CodegenConfig {
 
     private boolean maybeHandleEmptyName(String name) {
         if (name == null) {
-            LOGGER.warn("String to be sanitized is null. Default to " + Object.class.getSimpleName());
+            LOGGER.error("String to be sanitized is null. Default to " + Object.class.getSimpleName(), new Exception(""));
             return true;
         }
         return false;
